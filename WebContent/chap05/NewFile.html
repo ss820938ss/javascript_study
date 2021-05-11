@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+   <meta charset="UTF-8">
+   <title>Factorial 활용한 DecToBin</title>
+   <script type="text/javascript">
+   
+      var num = Number(prompt("10진수 정수를 입력하세요.", ""));
+      document.write("num >> " + num + "<br>");
+      
+      var str = "";
+      DecToBin(num, str);
+      
+      function DecToBin(num, str) {
+         if(num <= 1){
+            str += num % 2;
+            return document.write(str.split("").reverse().join(""));
+         }
+         
+         if (num % 2 == 0){
+            str += "0";
+         } else if(num % 2 == 1){
+            str += "1";
+         }
+            
+         DecToBin(parseInt(num / 2), str);
+      }
+
+   </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>프로토타입</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+	$(".btn li").click(function() {
+	    $(this).addClass("active");
+	    $(this).siblings().removeClass('active');
+
+	    $(".tabs div").removeClass("active");
+	    $(".tabs div").eq($(this).index()).addClass("active"); /* 현재 선택한 값을 인덱스로 가져옴 */
+	})
+    });
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section>
+		<div class="heading">
+			<h1>
+				<span>웹개발자</span>, 탭 메뉴 Tip & Tech
+			</h1>
+			<input type="text" placeholder="what are you looking for?">
+		</div>
+
+		<div class="tab-inner">
+			<ul class="btn">
+				<li class="active">HTML5</li>
+				<li>CSS3</li>
+				<li>JQUERY</li>
+				<li>JAVASCRIPT</li>
+				<li>CSS FRAMEWORKS</li>
+			</ul>
+
+			<div class="tabs">
+				<div class="active">
+					<h2>HTML5</h2>
+					<img alt="" src="images/platform-logo-01.png">
+					<p> 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Morbi interdum dapibus sollicitudin. Aenean nisi nisi, mattis
+						bibendum sollicitudin ut, consectetur ac lacus. Nulla accumsan eu
+						ante quis hendrerit. Aenean nec mi purus. Interdum et malesuada
+						fames ac ante ipsum primis in faucibus. Vivamus quis sollicitudin
+						odio. Nunc vitae nibh ac ante euismod egestas. Sed ultrices, arcu
+						cursus pulvinar hendrerit, justo est auctor urna, id ultricies
+						metus nisi ac mauris. Pellentesque vel tempus orci. Quisque quis
+						ultrices elit. Pellentesque ultricies libero eu aliquam dapibus.
+						Maecenas nunc sem, posuere vitae posuere sit amet, pretium
+						imperdiet diam. Suspendisse dictum lectus ut velit faucibus, et
+						interdum est pellentesque. Suspendisse accumsan mauris a nibh
+						vulputate lobortis. 
+					</p>
+				</div>
+				<div>
+					<h2>CSS3</h2>
+					<img alt="" src="images/platform-logo-02.png">
+					<p> 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Morbi interdum dapibus sollicitudin. Aenean nisi nisi, mattis
+						bibendum sollicitudin ut, consectetur ac lacus. Nulla accumsan eu
+						ante quis hendrerit. Aenean nec mi purus. Interdum et malesuada
+						fames ac ante ipsum primis in faucibus. Vivamus quis sollicitudin
+						odio. Nunc vitae nibh ac ante euismod egestas. Sed ultrices, arcu
+						cursus pulvinar hendrerit, justo est auctor urna, id ultricies
+						metus nisi ac mauris. Pellentesque vel tempus orci. Quisque quis
+						ultrices elit. Pellentesque ultricies libero eu aliquam dapibus.
+						Maecenas nunc sem, posuere vitae posuere sit amet, pretium
+						imperdiet diam. Suspendisse dictum lectus ut velit faucibus, et
+						interdum est pellentesque. Suspendisse accumsan mauris a nibh
+						vulputate lobortis. 
+					</p>
+				</div>
+				<div>
+					<h2>JQUERY</h2>
+					<img alt="" src="images/platform-logo-03.png">
+					<p> 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Morbi interdum dapibus sollicitudin. Aenean nisi nisi, mattis
+						bibendum sollicitudin ut, consectetur ac lacus. Nulla accumsan eu
+						ante quis hendrerit. Aenean nec mi purus. Interdum et malesuada
+						fames ac ante ipsum primis in faucibus. Vivamus quis sollicitudin
+						odio. Nunc vitae nibh ac ante euismod egestas. Sed ultrices, arcu
+						cursus pulvinar hendrerit, justo est auctor urna, id ultricies
+						metus nisi ac mauris. Pellentesque vel tempus orci. Quisque quis
+						ultrices elit. Pellentesque ultricies libero eu aliquam dapibus.
+						Maecenas nunc sem, posuere vitae posuere sit amet, pretium
+						imperdiet diam. Suspendisse dictum lectus ut velit faucibus, et
+						interdum est pellentesque. Suspendisse accumsan mauris a nibh
+						vulputate lobortis. 
+					</p>
+				</div>
+				<div>
+					<h2>JAVASCRIPT</h2>
+					<img alt="" src="images/platform-logo-04.png">
+					<p> 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Morbi interdum dapibus sollicitudin. Aenean nisi nisi, mattis
+						bibendum sollicitudin ut, consectetur ac lacus. Nulla accumsan eu
+						ante quis hendrerit. Aenean nec mi purus. Interdum et malesuada
+						fames ac ante ipsum primis in faucibus. Vivamus quis sollicitudin
+						odio. Nunc vitae nibh ac ante euismod egestas. Sed ultrices, arcu
+						cursus pulvinar hendrerit, justo est auctor urna, id ultricies
+						metus nisi ac mauris. Pellentesque vel tempus orci. Quisque quis
+						ultrices elit. Pellentesque ultricies libero eu aliquam dapibus.
+						Maecenas nunc sem, posuere vitae posuere sit amet, pretium
+						imperdiet diam. Suspendisse dictum lectus ut velit faucibus, et
+						interdum est pellentesque. Suspendisse accumsan mauris a nibh
+						vulputate lobortis. 
+					</p>
+				</div>
+				<div>
+					<h2>CSS FRAMEWORKS</h2>
+					<img alt="" src="images/platform-logo-05.png">
+					<p> 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Morbi interdum dapibus sollicitudin. Aenean nisi nisi, mattis
+						bibendum sollicitudin ut, consectetur ac lacus. Nulla accumsan eu
+						ante quis hendrerit. Aenean nec mi purus. Interdum et malesuada
+						fames ac ante ipsum primis in faucibus. Vivamus quis sollicitudin
+						odio. Nunc vitae nibh ac ante euismod egestas. Sed ultrices, arcu
+						cursus pulvinar hendrerit, justo est auctor urna, id ultricies
+						metus nisi ac mauris. Pellentesque vel tempus orci. Quisque quis
+						ultrices elit. Pellentesque ultricies libero eu aliquam dapibus.
+						Maecenas nunc sem, posuere vitae posuere sit amet, pretium
+						imperdiet diam. Suspendisse dictum lectus ut velit faucibus, et
+						interdum est pellentesque. Suspendisse accumsan mauris a nibh
+						vulputate lobortis. 
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

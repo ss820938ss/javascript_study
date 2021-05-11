@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+	<script>
+	$(function(){
+	    $(".navi li").on({
+	        "mouseenter focusin": function(){
+	            var idx = $(this).index()+1;
+	            $(".photo").css({
+	                "background-image" : "url(images/portrait-0" + idx + ".jpg)"
+	            })
+	        },
+	        "mouseleave blur" : function(){
+	            $(".photo").css({
+	                "background-image" : ""
+	            })
+	        }
+	    });
+		    /*
+		    $(".navi li").mouseenter(function() {
+				var ChangeImage = $(this).attr("data-image");
+//				alert(ChangeImage); 팝업으로 잘 실행되는지 확인 
+				$(".photo").css({
+				   'background-image' : 'url(' + ChangeImage + ')'
+				});
+		    });
+		    
+		    $(".navi li").mouseleave(function() {		
+		    	$(".photo").css({
+		    		'background-image' : 'url(' + ChangeImage + ')'
+		    	});
+		    })
+		    */
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<ul class="navi">
+			<!-- data- 는 자신이 커스텀해서 지정해줄수있는 이름 -->
+			<li><a href="#none" data-text="ABOUT">ABOUT</a></li>
+			<li><a href="#none" data-text="INSTRUCTOR">INSTRUCTOR</a></li>
+			<li><a href="#none" data-text="CLASS">CLASS</a></li>
+			<li><a href="#none" data-text="LOCATION">LOCATION</a></li>
+		</ul>
+		<div class="photo"></div>
+	</div>
+</body>
+</html>

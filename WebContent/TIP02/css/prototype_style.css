@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+
+section {
+	border: 1px solid #000;
+	width: 800px;
+}
+
+.btn {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid red;
+	overflow: hidden;
+}
+
+.btn li {
+	float: left;
+	/* 자식에게 플로우가 들어가면 위에 넣은 항목이 적용안됨, overflow: hidden 추가시 해결 */
+	border: 1px solid #000;
+	background-color: gray;
+}
+
+.btn li.active {
+	background-color: #fff;
+}
+
+.tabs {}
+
+.tabs div {
+	border: 1px solid #000;
+	height: 200px;
+	display: none;
+}
+
+.tabs div.active {
+	display: block;
+}

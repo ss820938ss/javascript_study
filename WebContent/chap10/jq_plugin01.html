@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery UI Draggable - Default functionality</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+
+<script src="js/jquery-ui.min.js"></script>
+<style>
+#draggable {
+	width: 150px;
+	height: 150px;
+	padding: 0.5em;
+}
+</style>
+
+<script>
+    $(function() {
+		$("#draggable").draggable();
+    });
+</script>
+</head>
+<body>
+	<div id="draggable" class="ui-widget-content">
+		<img alt="" src="images/math_img_1.jpg">
+	</div>
+</body>
+</html>

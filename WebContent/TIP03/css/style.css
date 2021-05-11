@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+/*  background: #000;  테스트      */   
+}
+
+.navi {
+	/* 중앙정렬 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	z-index: 100; /* 글씨를 이미지 위로 올리기 */
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navi li {}
+
+.navi li a {
+	font-size: 4em;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+}
+
+.navi li a:after {
+	position: absolute;
+	color: yellowgreen;
+	top: 0;
+	left: 0;
+	
+	width: 10%;
+	overflow: hidden;
+	
+	content: attr(data-text);
+	
+	transition: 0.5s;
+}
+
+.navi li a:hover:after {
+	width: 100%
+	/* 위를 애프터로 했으면 밑도 애프터로 해야 효과적용됨 */
+}
+
+.navi li a:focus:after {
+	width: 100%
+	/* 마우스가 아니라 포커스로 적용, 탭키로 글씨 색 입히기 */
+}
+
+.photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+/* 	background: url("../images/portrait-initial.jpg") no-repeat center center; */
+	background-image: url("../images/portrait-initial.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+
